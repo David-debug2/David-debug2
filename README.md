@@ -97,9 +97,9 @@ The launch registry contains **Alea Rental** and **Vault OS**. Hardware entries 
 ## Contribution Snake
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/David-debug2/David-debug2/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/David-debug2/David-debug2/output/github-contribution-grid-snake.svg">
-  <img alt="Snake animation of David-debug2's GitHub contribution graph" src="https://raw.githubusercontent.com/David-debug2/David-debug2/output/github-contribution-grid-snake.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/David-debug2/David-debug2/output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/David-debug2/David-debug2/output/github-snake.svg">
+  <img alt="Snake animation of David-debug2's GitHub contribution graph" src="https://raw.githubusercontent.com/David-debug2/David-debug2/output/github-snake.svg">
 </picture>
 
 [How this profile updates](MAINTENANCE.md)

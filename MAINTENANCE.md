@@ -37,9 +37,9 @@ Local fixture tests verify failure handling but do not establish live API access
 
 ## Automation
 
-Refresh profile and Contribution snake run at 00:17 UTC (08:17 Asia/Manila) daily and can be started manually. Relevant pushes to main trigger them too. Scheduled GitHub runs can be delayed or disabled after prolonged repository inactivity; check the Actions page if the displayed date becomes old.
+Refresh profile runs at 00:17 UTC (08:17 Asia/Manila) daily. GitHub Snake Game runs at 00:00 UTC (08:00 Asia/Manila) daily, manually, and on every push to main. Relevant pushes also trigger profile refresh. Scheduled GitHub runs can be delayed or disabled after prolonged repository inactivity; check the Actions page if the displayed date becomes old.
 
-Jobs have bounded runtimes and only the generating job receives contents: write. Actions are pinned to verified commit hashes. The default GitHub token publishes updates; no personal token is needed. Profile updates stage only generated README/SVG/cache files. Snake SVGs are committed to output through ordinary non-force pushes. Do not force-push either branch.
+Jobs have bounded runtimes and only the generating job receives contents: write. Actions are pinned to verified commit hashes. The default GitHub token publishes updates; no personal token is needed. Profile updates stage only generated README/SVG/cache files. The full pinned Platane/snk action generates github-snake.svg, github-snake-dark.svg, and ocean.gif for github.repository_owner. The GIF uses the orange snake and five blue dot colors specified in the workflow. All three are committed to output through ordinary non-force pushes; existing output files/history are preserved. Do not force-push either branch.
 
 ## Languages, tools, and video cards
 

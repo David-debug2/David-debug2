@@ -1,11 +1,10 @@
-name: Contribution snake
+name: GitHub Snake Game
 on:
   schedule:
-    - cron: '17 0 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/contribution-snake.yml']
 permissions:
   contents: read
 concurrency:
@@ -18,20 +17,23 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-      - name: Generate light and dark snakes
-        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+      - name: Checkout Repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Generate GitHub Contributions Snake Animations
+        uses: Platane/snk@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3, SVG and GIF
         with:
-          github_user_name: David-debug2
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish output branch without force push
         shell: bash
         run: |
-          cp dist/*.svg /tmp/
+          publish_dir="$(mktemp -d)"
+          cp dist/github-snake.svg dist/github-snake-dark.svg dist/ocean.gif "$publish_dir/"
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
             git checkout -B output origin/output
@@ -39,11 +41,11 @@ jobs:
             git checkout --orphan output
             git rm -rf .
           fi
-          cp /tmp/github-contribution-grid-snake*.svg .
+          cp "$publish_dir/github-snake.svg" "$publish_dir/github-snake-dark.svg" "$publish_dir/ocean.gif" .
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add github-contribution-grid-snake*.svg
+          git add github-snake.svg github-snake-dark.svg ocean.gif
           if ! git diff --cached --quiet; then
-            git commit -m 'chore(profile): refresh contribution snake'
+            git commit -m 'chore(profile): update snake animation [skip ci]'
             git push origin HEAD:output
           fi
