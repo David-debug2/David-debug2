@@ -1,0 +1,14 @@
+[
+  {
+    "id": "alea-rental",
+    "name": "Alea Rental",
+    "kind": "software",
+    "built": true
+  },
+  {
+    "id": "vault-os",
+    "name": "Vault OS",
+    "kind": "software",
+    "built": true
+  }
+]

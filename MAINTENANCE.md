@@ -1,0 +1,45 @@
+# Maintaining the Project D profile
+
+The profile is published from the public David-debug2/David-debug2 repository. Its root README is displayed by GitHub.
+
+## Local checks
+
+Use Node.js 24. No npm dependencies or install step are required.
+
+- Run npm test for generator/API fixture checks.
+- Run npm run generate to regenerate README sections, language badges, and stats cards.
+- Keep biography text outside the VIDEOS and STATS comment markers.
+- Edit data/projects.json to maintain the public portfolio. Each entry requires a stable unique id, name, kind (software or hardware), and built boolean. Count each real built project once. Do not add demos, editions, templates, individual features, or this profile.
+- Rank progression: Apprentice 0, Builder 200, Engineer 500, Inventor 1000, Architect 2000 XP; 100 XP per distinct built project. The progress bar measures advancement within the current tier.
+
+## Enable YouTube updates
+
+1. In Google Cloud, enable YouTube Data API v3 and create an API key restricted to that API.
+2. In this repository, open Settings → Secrets and variables → Actions → New repository secret.
+3. Name the secret YOUTUBE_API_KEY and paste the key there. Never put a key in a commit, issue, README, or workflow text.
+4. Open Actions → Refresh profile → Run workflow on main.
+5. Confirm that data/youtube.json has status ready, the correct channel ID and update date, and that the README shows the latest uploads and channel counts.
+
+The updater resolves @Project-D-2026 with channels.list, requests the 50 most recent upload-playlist entries, verifies public video status, sorts by publication date, and displays up to six videos. Deleted/private uploads are omitted. Subscriber counts reflect YouTube public reporting precision; hidden counts are labelled. Channel views are the API’s channel-wide total, not a sum of the six displayed videos.
+
+A missing key or failed request preserves the last successful data. Before the first successful request, the README explicitly says Awaiting first sync. The workflow prints a warning without logging API URLs or keys. The visible date identifies the last successful refresh; it does not advance on failure.
+
+## Automation
+
+Refresh profile and Contribution snake run at 00:17 UTC (08:17 Asia/Manila) daily and can be started manually. Relevant pushes to main trigger them too. Scheduled GitHub runs can be delayed or disabled after prolonged repository inactivity; check the Actions page if the displayed date becomes old.
+
+Jobs have bounded runtimes and only the generating job receives contents: write. Actions are pinned to verified commit hashes. The default GitHub token publishes updates; no personal token is needed. Profile updates stage only generated README/SVG/cache files. Snake SVGs are committed to output through ordinary non-force pushes. Do not force-push either branch.
+
+## Banner
+
+assets/project-d-dancing-lights.mp4 is the supplied original. assets/project-d-banner.gif is its full silent six-second loop, preserving aspect ratio. It is linked to the MP4 for playback. The animated banner is an image because README layouts cannot rely on a custom video player. Conversion used FFmpeg at 12 fps, width 960 px, with a 128-color palette and Bayer dithering. Retain the original and keep the GIF under 5 MB.
+
+## Visual checks
+
+Inspect the GitHub profile on wide and narrow screens, in light and dark themes. Confirm the banner animates, no content is clipped, thumbnails open the right videos, text equivalents accompany the SVG cards, and both contribution-snake variants load. A successful generator test does not establish live YouTube access or visual acceptance.
+
+## Sources
+
+- [GitHub profile README requirements](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme)
+- [YouTube channels.list](https://developers.google.com/youtube/v3/docs/channels/list)
+- [Platane/snk](https://github.com/Platane/snk)

@@ -1,0 +1,9 @@
+{
+  "name": "project-d-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/update-profile.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
