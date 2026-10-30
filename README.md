@@ -28,19 +28,31 @@ Got a project or an idea? I'm open to collabs and freelance work. Look around, a
 
 [GitHub](https://github.com/David-debug2) · [Project D on YouTube](https://www.youtube.com/@Project-D-2026)
 
-## Languages & Tools
+## 🧰 Languages and Tools
 
-Languages used in my built software projects, Alea Rental and Vault OS:
+Used across Alea Rental, Vault OS, and this profile:
 
-![JavaScript](assets/javascript.svg) ![TypeScript](assets/typescript.svg) ![HTML](assets/html.svg) ![CSS](assets/css.svg) ![SQL](assets/sql.svg)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-**Tools & platforms:** React · Obsidian · Cloudflare · Supabase
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Obsidian](https://img.shields.io/badge/Obsidian-7C3AED?style=for-the-badge&logo=obsidian&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=3FCF8E)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
-## Latest YouTube Videos
+## 📺 Latest YouTube Videos
 
 <!-- VIDEOS:START -->
 Awaiting first sync. [Watch Project D on YouTube](https://www.youtube.com/@Project-D-2026).
 <!-- VIDEOS:END -->
+
+[![Subscribe for more](https://img.shields.io/badge/Subscribe_for_more-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Project-D-2026?sub_confirmation=1)
 
 ## Builder Stats
 

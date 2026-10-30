@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {portfolio,newest,subscriberLabel,refreshYouTube,replaceSection,videoSection,card} from '../scripts/profile-lib.mjs';
+import {portfolio,newest,subscriberLabel,refreshYouTube,replaceSection,videoSection,card,durationSeconds} from '../scripts/profile-lib.mjs';
 const p=(id,kind='software')=>({id,name:id,kind,built:true});
 test('portfolio deduplicates projects and separates kinds',()=>{
   const result=portfolio([p('a'),p('a'),p('b','hardware'),{...p('draft'),built:false}]);
@@ -37,4 +37,22 @@ test('generated sections preserve authored biography and reject malformed marker
   const original='Bio\n<!-- X:START -->\nold\n<!-- X:END -->\nFooter';assert.equal(replaceSection(original,'X','new'),'Bio\n<!-- X:START -->\nnew\n<!-- X:END -->\nFooter');assert.throws(()=>replaceSection('bio','X','new'));
 });
 test('initial state never invents YouTube counts',()=>assert.match(videoSection({status:'pending'}),/Awaiting first sync/));
+test('video cards keep untrusted titles in encoded attributes and only use real durations',()=>{
+  const title = 'Build " & <script>alert(1)</script> [demo]';
+  const html = videoSection({status:'ready',updatedAt:'2026-10-31T00:00:00Z',videos:[{id:'abcdefghij0',title,publishedAt:'2026-10-01T00:00:00Z',durationSeconds:95},{id:'abcdefghij1',title:'No duration',publishedAt:'2026-10-02T00:00:00Z'}]});
+  assert.ok(!html.includes('<script>'));
+  const sources = [...html.matchAll(/src="([^"]+)"/g)].map(m=>new URL(m[1].replaceAll('&amp;','&')));
+  assert.equal(sources.length,2);
+  assert.equal(sources[0].searchParams.get('id'),'abcdefghij1');
+  assert.equal(sources[0].searchParams.has('duration'),false);
+  assert.equal(sources[1].searchParams.get('title'),title);
+  assert.equal(sources[1].searchParams.get('duration'),'95');
+  assert.equal(sources[1].searchParams.get('width'),'250');
+  assert.ok(html.includes('alt="Build &quot; &amp; &lt;script&gt;'));
+});
+test('YouTube durations are converted without invented values',()=>{
+  assert.equal(durationSeconds('PT1H2M3S'),3723);
+  assert.equal(durationSeconds('P1DT2H'),93600);
+  for (const value of [undefined,'PT','PT0S','not-a-duration','PT-1S']) assert.equal(durationSeconds(value),null);
+});
 test('SVG escapes titles and descriptions',()=>{const svg=card('<script>',['A & B']);assert.ok(!svg.includes('<script>'));assert.ok(svg.includes('&lt;script&gt;'));assert.ok(svg.includes('A &amp; B'));});

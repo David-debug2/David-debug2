@@ -17,6 +17,12 @@ export function newest(videos) {
   return [...new Map(videos.filter(v=> /^[A-Za-z0-9_-]{11}$/.test(v.id) && typeof v.title === 'string' && Number.isFinite(Date.parse(v.publishedAt))).map(v=>[v.id,v])).values()].sort((a,b)=>Date.parse(b.publishedAt)-Date.parse(a.publishedAt)||a.id.localeCompare(b.id)).slice(0,6);
 }
 export function subscriberLabel(data) {return data.hiddenSubscriberCount ? 'Hidden by channel' : data.subscriberCount ?? 'Unavailable';}
+export function durationSeconds(value) {
+  const match = /^P(?:(\d+)D)?T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/.exec(value ?? '');
+  if (!match || !match.slice(1).some(Boolean)) return null;
+  const seconds = Number(match[1] ?? 0)*86400 + Number(match[2] ?? 0)*3600 + Number(match[3] ?? 0)*60 + Number(match[4] ?? 0);
+  return Number.isSafeInteger(seconds) && seconds > 0 ? seconds : null;
+}
 export async function fetchYouTube(key, request = fetch, now = new Date()) {
   if (!key) return null;
   async function api(resource,params) {
@@ -35,9 +41,9 @@ export async function fetchYouTube(key, request = fetch, now = new Date()) {
   const list = await api('playlistItems',{part:'contentDetails',playlistId:uploads,maxResults:'50'});
   if (!Array.isArray(list.items)) throw new Error('Incomplete uploads response');
   const ids = list.items.map(v=>v.contentDetails?.videoId).filter(Boolean);
-  const details = ids.length ? await api('videos',{part:'snippet,status',id:ids.join(',')}) : {items:[]};
+  const details = ids.length ? await api('videos',{part:'snippet,status,contentDetails',id:ids.join(',')}) : {items:[]};
   if (!Array.isArray(details.items)) throw new Error('Incomplete video response');
-  const videos = newest(details.items.filter(v=>v.status?.privacyStatus==='public').map(v=>({id:v.id,title:v.snippet?.title,publishedAt:v.snippet?.publishedAt})));
+  const videos = newest(details.items.filter(v=>v.status?.privacyStatus==='public').map(v=>({id:v.id,title:v.snippet?.title,publishedAt:v.snippet?.publishedAt,durationSeconds:durationSeconds(v.contentDetails?.duration)})));
   return {status:'ready',handle:'@Project-D-2026',channelUrl:'https://www.youtube.com/@Project-D-2026',channelId:channel.id,updatedAt:now.toISOString(),subscriberCount:stats.hiddenSubscriberCount ? null : stats.subscriberCount,hiddenSubscriberCount:!!stats.hiddenSubscriberCount,viewCount:stats.viewCount,videos};
 }
 export async function refreshYouTube(previous,key,request=fetch,now=new Date()) {
@@ -56,6 +62,10 @@ export function card(title,lines,accent='#39d9df',progress=null) {
 }
 export function videoSection(data) {
   if (data.status!=='ready') return 'Awaiting first sync. [Watch Project D on YouTube](https://www.youtube.com/@Project-D-2026).';
-  const links = newest(data.videos).map(v=>'[![Video thumbnail](https://i.ytimg.com/vi/'+v.id+'/mqdefault.jpg)](https://www.youtube.com/watch?v='+v.id+')\n\n['+escapeXml(v.title).replace(/[\[\]\\]/g,'\\$&')+'](https://www.youtube.com/watch?v='+v.id+')');
-  return (links.length?links.join('\n\n'):'No public uploads found.')+'\n\nUpdated: '+data.updatedAt.slice(0,10)+' (UTC).';
+  const links = newest(data.videos).map(v=>{
+    const params = new URLSearchParams({id:v.id,title:v.title,lang:'en',timestamp:String(Math.floor(Date.parse(v.publishedAt)/1000)),background_color:'#0d1117',title_color:'#ffffff',stats_color:'#dedede',max_title_lines:'2',width:'250',border_radius:'5'});
+    if (Number.isSafeInteger(v.durationSeconds) && v.durationSeconds>0) params.set('duration',String(v.durationSeconds));
+    return '<a href="https://www.youtube.com/watch?v='+v.id+'"><img src="'+escapeXml('https://ytcards.demolab.com/?'+params)+'" width="250" alt="'+escapeXml(v.title)+'" title="'+escapeXml(v.title)+'" /></a>';
+  });
+  return (links.length?'<p align="left">\n'+links.join('\n')+'\n</p>':'No public uploads found.')+'\n\nUpdated: '+data.updatedAt.slice(0,10)+' (UTC).';
 }

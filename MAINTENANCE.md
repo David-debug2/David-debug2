@@ -41,6 +41,14 @@ Refresh profile and Contribution snake run at 00:17 UTC (08:17 Asia/Manila) dail
 
 Jobs have bounded runtimes and only the generating job receives contents: write. Actions are pinned to verified commit hashes. The default GitHub token publishes updates; no personal token is needed. Profile updates stage only generated README/SVG/cache files. Snake SVGs are committed to output through ordinary non-force pushes. Do not force-push either branch.
 
+## Languages, tools, and video cards
+
+The README uses Shields.io `for-the-badge` logo badges for verified languages and tools used across Alea Rental, Vault OS, and this profile. Update the authored badge list in README.md when the actual stack changes. The older local language SVGs are retained but are no longer used by that section.
+
+The VIDEOS section is generated as up to six compact 250px dark cards using ytcards.demolab.com, matching the supplied reference style. Video IDs, titles, publication times, and optional durations come from the official YouTube API cache. Titles are escaped in HTML and encoded in image URLs; valid durations are converted from YouTube ISO 8601 metadata to seconds. Missing durations are omitted. The channel Subscribe button stays outside the generated markers.
+
+Shields.io and the video-card service are external image dependencies. If a card image is unavailable, its accessible title and direct YouTube link remain in the README. These services do not receive the API key. Before first successful API activation, the video section retains Awaiting first sync; styling does not establish that live synchronization worked.
+
 ## Banner
 
 assets/project-d-dancing-lights.mp4 is the supplied original. assets/project-d-banner.gif is its full silent six-second loop, preserving aspect ratio. It is linked to the MP4 for playback. The animated banner is an image because README layouts cannot rely on a custom video player. Conversion used FFmpeg at 12 fps, width 960 px, with a 128-color palette and Bayer dithering. Retain the original and keep the GIF under 5 MB.
