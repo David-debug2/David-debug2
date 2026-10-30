@@ -24,6 +24,17 @@ The updater resolves @Project-D-2026 with channels.list, requests the 50 most re
 
 A missing key or failed request preserves the last successful data. Before the first successful request, the README explicitly says Awaiting first sync. The workflow prints a warning without logging API URLs or keys. The visible date identifies the last successful refresh; it does not advance on failure.
 
+## Troubleshoot a stale YouTube section
+
+A green Refresh profile run means the workflow completed; it does not prove that YouTube synchronization succeeded. The updater deliberately preserves previous data when a key is missing or an API request fails.
+
+1. Open the latest Refresh profile run and inspect the Refresh profile step for a missing-key or refresh-failed warning. Do not paste credentials or authenticated API URLs into issues.
+2. Confirm that the repository Actions secret is named YOUTUBE_API_KEY. If Google rejects requests, check that YouTube Data API v3 is enabled in the key's Google Cloud project and allowed by its API restrictions.
+3. Run Refresh profile manually after correcting configuration. Check [data/youtube.json](data/youtube.json): status must be ready and updatedAt must identify a successful refresh. Confirm that the rendered README matches the cache.
+4. If the section is still Awaiting first sync, activation remains pending. If older data remains, its displayed date is the last successful refresh, not the latest attempted run.
+
+Local fixture tests verify failure handling but do not establish live API access. Never replace missing counts with guessed values.
+
 ## Automation
 
 Refresh profile and Contribution snake run at 00:17 UTC (08:17 Asia/Manila) daily and can be started manually. Relevant pushes to main trigger them too. Scheduled GitHub runs can be delayed or disabled after prolonged repository inactivity; check the Actions page if the displayed date becomes old.
