@@ -30,7 +30,7 @@ Got a project or an idea? I'm open to collabs and freelance work. Look around, a
 
 ## 🧰 Languages and Tools
 
-Used across Alea Rental, Vault OS, and this profile:
+I Used as of 2026:
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -56,7 +56,6 @@ Used across Alea Rental, Vault OS, and this profile:
 <a href="https://www.youtube.com/watch?v=yK_BRY4uY1g"><img src="https://ytcards.demolab.com/?id=yK_BRY4uY1g&amp;title=Obsidian+Dashboard+Plugin-+v1.4.9.5&amp;lang=en&amp;timestamp=1791045194&amp;background_color=%230d1117&amp;title_color=%23ffffff&amp;stats_color=%23dedede&amp;max_title_lines=2&amp;width=250&amp;border_radius=5&amp;duration=374" width="250" alt="Obsidian Dashboard Plugin- v1.4.9.5" title="Obsidian Dashboard Plugin- v1.4.9.5" /></a>
 </p>
 
-Updated: 2026-10-30 (UTC).
 <!-- VIDEOS:END -->
 
 [![Subscribe for more](https://img.shields.io/badge/Subscribe_for_more-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Project-D-2026?sub_confirmation=1)
