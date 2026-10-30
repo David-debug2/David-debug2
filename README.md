@@ -49,7 +49,14 @@ Used across Alea Rental, Vault OS, and this profile:
 ## 📺 Latest YouTube Videos
 
 <!-- VIDEOS:START -->
-Awaiting first sync. [Watch Project D on YouTube](https://www.youtube.com/@Project-D-2026).
+<p align="left">
+<a href="https://www.youtube.com/watch?v=KDj_yH9R7IM"><img src="https://ytcards.demolab.com/?id=KDj_yH9R7IM&amp;title=Obsidian+Vault+%7C+Health+%26+Fitness+Dashboard&amp;lang=en&amp;timestamp=1792573731&amp;background_color=%230d1117&amp;title_color=%23ffffff&amp;stats_color=%23dedede&amp;max_title_lines=2&amp;width=250&amp;border_radius=5&amp;duration=523" width="250" alt="Obsidian Vault | Health &amp; Fitness Dashboard" title="Obsidian Vault | Health &amp; Fitness Dashboard" /></a>
+<a href="https://www.youtube.com/watch?v=2DnzQ8761e8"><img src="https://ytcards.demolab.com/?id=2DnzQ8761e8&amp;title=My+Obsidian+Vault+OS+Beta+2.0&amp;lang=en&amp;timestamp=1792306327&amp;background_color=%230d1117&amp;title_color=%23ffffff&amp;stats_color=%23dedede&amp;max_title_lines=2&amp;width=250&amp;border_radius=5&amp;duration=365" width="250" alt="My Obsidian Vault OS Beta 2.0" title="My Obsidian Vault OS Beta 2.0" /></a>
+<a href="https://www.youtube.com/watch?v=Dn8EIlN8Oa0"><img src="https://ytcards.demolab.com/?id=Dn8EIlN8Oa0&amp;title=Obsidian+Vault+%7C+Dashboard+v1.5.2.4&amp;lang=en&amp;timestamp=1791213697&amp;background_color=%230d1117&amp;title_color=%23ffffff&amp;stats_color=%23dedede&amp;max_title_lines=2&amp;width=250&amp;border_radius=5&amp;duration=432" width="250" alt="Obsidian Vault | Dashboard v1.5.2.4" title="Obsidian Vault | Dashboard v1.5.2.4" /></a>
+<a href="https://www.youtube.com/watch?v=yK_BRY4uY1g"><img src="https://ytcards.demolab.com/?id=yK_BRY4uY1g&amp;title=Obsidian+Dashboard+Plugin-+v1.4.9.5&amp;lang=en&amp;timestamp=1791045194&amp;background_color=%230d1117&amp;title_color=%23ffffff&amp;stats_color=%23dedede&amp;max_title_lines=2&amp;width=250&amp;border_radius=5&amp;duration=374" width="250" alt="Obsidian Dashboard Plugin- v1.4.9.5" title="Obsidian Dashboard Plugin- v1.4.9.5" /></a>
+</p>
+
+Updated: 2026-10-30 (UTC).
 <!-- VIDEOS:END -->
 
 [![Subscribe for more](https://img.shields.io/badge/Subscribe_for_more-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Project-D-2026?sub_confirmation=1)
@@ -67,7 +74,9 @@ Awaiting first sync. [Watch Project D on YouTube](https://www.youtube.com/@Proje
 
 **Verified portfolio entries:** 2 software · 0 hardware · 2 total.
 
-Subscribers: Awaiting first sync · Total channel views: Awaiting first sync
+Subscribers: 52 · Total channel views: 1922 · Updated: 2026-10-30 UTC
+
+Subscriber counts use YouTube’s public reporting precision.
 <!-- STATS:END -->
 
 <details>

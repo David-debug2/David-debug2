@@ -1,7 +1,36 @@
 {
-  "status": "pending",
+  "status": "ready",
   "handle": "@Project-D-2026",
   "channelUrl": "https://www.youtube.com/@Project-D-2026",
-  "updatedAt": null,
-  "videos": []
+  "channelId": "UCV-4Wwm9NxyW8aL_SyHtBQQ",
+  "updatedAt": "2026-10-30T23:31:09.648Z",
+  "subscriberCount": "52",
+  "hiddenSubscriberCount": false,
+  "viewCount": "1922",
+  "videos": [
+    {
+      "id": "KDj_yH9R7IM",
+      "title": "Obsidian Vault | Health & Fitness Dashboard",
+      "publishedAt": "2026-10-21T09:08:51Z",
+      "durationSeconds": 523
+    },
+    {
+      "id": "2DnzQ8761e8",
+      "title": "My Obsidian Vault OS Beta 2.0",
+      "publishedAt": "2026-10-18T06:52:07Z",
+      "durationSeconds": 365
+    },
+    {
+      "id": "Dn8EIlN8Oa0",
+      "title": "Obsidian Vault | Dashboard v1.5.2.4",
+      "publishedAt": "2026-10-05T15:21:37Z",
+      "durationSeconds": 432
+    },
+    {
+      "id": "yK_BRY4uY1g",
+      "title": "Obsidian Dashboard Plugin- v1.4.9.5",
+      "publishedAt": "2026-10-03T16:33:14Z",
+      "durationSeconds": 374
+    }
+  ]
 }
