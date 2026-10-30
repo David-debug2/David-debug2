@@ -67,5 +67,5 @@ export function videoSection(data) {
     if (Number.isSafeInteger(v.durationSeconds) && v.durationSeconds>0) params.set('duration',String(v.durationSeconds));
     return '<a href="https://www.youtube.com/watch?v='+v.id+'"><img src="'+escapeXml('https://ytcards.demolab.com/?'+params)+'" width="250" alt="'+escapeXml(v.title)+'" title="'+escapeXml(v.title)+'" /></a>';
   });
-  return (links.length?'<p align="left">\n'+links.join('\n')+'\n</p>':'No public uploads found.')+'\n\nUpdated: '+data.updatedAt.slice(0,10)+' (UTC).';
+  return links.length?'<p align="left">\n'+links.join('\n')+'\n</p>':'No public uploads found.';
 }
