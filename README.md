@@ -18,8 +18,12 @@
 
 <br>
 
+<div align="center">
+
 <details>
-<summary><h2 align="center">About Me</h2></summary>
+<summary><strong>About Me</strong></summary>
+
+<div align="left">
 
 ### EE Student | Engineering Developer | Vibe Coder Engineer
 
@@ -41,7 +45,11 @@ Every project teaches me something new, whether it's a quick script, a big engin
 
 **Always learning. Always building.**
 
+</div>
+
 </details>
+
+</div>
 
 ## 🤝 Let's Connect
 
