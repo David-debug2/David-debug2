@@ -1,4 +1,4 @@
-import {readFile,writeFile} from 'node:fs/promises';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 
 export const snakeColors = ['#161b22','#ffd19a','#d97706','#a84b00','#e3df52'];
@@ -49,9 +49,10 @@ async function main() {
   const weeks = result.data?.user?.contributionsCollection?.contributionCalendar?.weeks;
   const files = ['dist/github-snake.svg','dist/github-snake-dark.svg'];
   const styled = await Promise.all(files.map(async file=>styleSnake(await readFile(file,'utf8'),weeks)));
-  await Promise.all(files.map((file,i)=>writeFile(file,styled[i])));
+  await mkdir('styled',{recursive:true});
+  await Promise.all(files.map((file,i)=>writeFile(file.replace('dist/','styled/'),styled[i])));
 }
 
 if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
-  await main().catch(()=>{console.error('Snake calendar styling failed; existing published output was not replaced.');process.exitCode=1;});
+  await main().catch(error=>{console.error('Snake calendar styling failed: '+(error instanceof Error?error.message:'unknown error')+'. Existing published output was not replaced.');process.exitCode=1;});
 }

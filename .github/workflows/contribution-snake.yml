@@ -41,7 +41,7 @@ jobs:
         shell: bash
         run: |
           publish_dir="$(mktemp -d)"
-          cp dist/github-snake.svg dist/github-snake-dark.svg dist/ocean.gif "$publish_dir/"
+          cp styled/github-snake.svg styled/github-snake-dark.svg dist/ocean.gif "$publish_dir/"
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
             git checkout -B output origin/output
