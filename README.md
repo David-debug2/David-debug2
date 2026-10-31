@@ -95,6 +95,7 @@ I Used as of 2026:
 <!-- PROJECTS:START -->
 <table>
 <tr><td width="300"><strong>test</strong></td><td valign="top"><p align="right">🟢 Released</p><h3>test</h3><p>asd sadasdsadsad</p><p><img src="assets/project-icons/angular.svg" width="28" height="28" alt="Angular" title="Angular"> <img src="assets/project-icons/vscode.svg" width="28" height="28" alt="VS Code" title="VS Code"> <img src="assets/project-icons/javascript.svg" width="28" height="28" alt="JavaScript" title="JavaScript"> <img src="assets/project-icons/python.svg" width="28" height="28" alt="Python" title="Python"></p><p></p></td></tr>
+<tr><td width="300"><img src="assets/projects/8eca83b4b93182afb5e8f41749d163d3b8698391618ed4b03ac58e67cd501fab.png" width="300" alt="test 21"></td><td valign="top"><p align="right">🟡 Testing</p><h3>test 21</h3><p>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</p><p><img src="assets/project-icons/bash.svg" width="28" height="28" alt="Bash" title="Bash"> <img src="assets/project-icons/vscode.svg" width="28" height="28" alt="VS Code" title="VS Code"></p><p></p></td></tr>
 </table>
 <!-- PROJECTS:END -->
 
