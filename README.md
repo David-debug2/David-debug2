@@ -28,7 +28,7 @@ I'm that person who loves making things, kind of **Iron Man-style**. I like figu
 
 ## 🧠 How I Work
 
-- **Vibe coder engineer:** I use AI to prototype fast, then I review, test, and put it all together with an engineer's eye.
+- **AI-assisted engineering:** I plan each feature, build with AI, then test, refine, and document it before release.
 - **Right tool for the job:** I don't stick to one stack. I pick what works for each project.
 - **Everything's documented:** My notes and projects live in Obsidian, in my own **Vault OS** vault.
 
