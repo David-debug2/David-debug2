@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {styleSnake} from '../scripts/style-snake.mjs';
+import {calendarTheme} from '../scripts/snake-theme.mjs';
+const colors=['#161b22','#39d353','#26a641','#006d32','#0e4429'];
 
 function fixture() {
   const weeks = Array.from({length:53},()=>({contributionDays:[]}));
@@ -17,7 +19,7 @@ function fixture() {
 
 test('calendar frame preserves the real animation and every contribution cell',()=>{
   const {svg,weeks} = fixture();
-  const output = styleSnake(svg,weeks);
+  const output = styleSnake(svg,weeks,colors);
   assert.ok(output.includes('@keyframes snake{to{transform:translate(16px,0)}}'));
   assert.equal((output.match(/<rect class="c"/g) ?? []).length,370);
   assert.ok(output.includes('width="733" height="144"'));
@@ -31,8 +33,29 @@ test('calendar frame preserves the real animation and every contribution cell',(
 
 test('mismatched calendar data and changed upstream geometry are rejected before publishing',()=>{
   const {svg,weeks} = fixture();
-  assert.throws(()=>styleSnake(svg.replace('<rect class="c" x="2" y="2"/>',''),weeks),/align/);
-  assert.throws(()=>styleSnake(svg.replace('880 192','880 200'),weeks),/layout/);
+  assert.throws(()=>styleSnake(svg.replace('<rect class="c" x="2" y="2"/>',''),weeks,colors),/align/);
+  assert.throws(()=>styleSnake(svg.replace('880 192','880 200'),weeks,colors),/layout/);
   weeks[0].contributionDays[0].weekday = 4;
-  assert.throws(()=>styleSnake(svg,weeks),/alignment/);
+  assert.throws(()=>styleSnake(svg,weeks,colors),/alignment/);
+});
+
+
+test('live GitHub palette selects normal, Halloween, and future seasonal colors without a date table',()=>{
+  for(const [isHalloween,palette] of [[false,['#ebedf0','#9be9a8','#40c463','#30a14e','#216e39']],[true,['#ebedf0','#ffee4a','#ffc501','#fe9600','#03001c']],[false,['#000000','#123456','#234567','#345678','#456789']]]) {
+    const theme=calendarTheme({colors:palette,isHalloween});
+    assert.deepEqual(theme.dots,['#161b22',...palette.slice(1)]);
+    assert.equal(theme.isHalloween,isHalloween);
+    const {svg,weeks}=fixture();
+    const result=styleSnake(svg,weeks,theme.dots);
+    for(const color of theme.dots) assert.ok(result.includes('fill="'+color+'"'));
+  }
+});
+
+test('missing or unsafe calendar palettes fail instead of publishing a guessed holiday theme',()=>{
+  for(const colors of [undefined,[],['#fff'],['#161b22','#123456','#234567','#345678','red&injected=value']]) {
+    assert.throws(()=>calendarTheme({colors,isHalloween:true}),/theme/);
+  }
+  assert.throws(()=>calendarTheme({colors,isHalloween:'yes'}),/theme/);
+  const {svg,weeks}=fixture();
+  assert.throws(()=>styleSnake(svg,weeks,['invalid']),/palette/);
 });

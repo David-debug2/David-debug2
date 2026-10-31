@@ -19,21 +19,26 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - name: Read GitHub seasonal calendar colors
+        id: theme
+        run: node scripts/snake-theme.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate GitHub Contributions Snake Animations
         uses: Platane/snk@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3, SVG and GIF
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg?color_snake=#f85149&color_dots=#161b22,#ffd19a,#d97706,#a84b00,#e3df52
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#58a6ff&color_dots=#161b22,#ffd19a,#d97706,#a84b00,#e3df52
-            dist/ocean.gif?color_snake=#58a6ff&color_dots=#161b22,#ffd19a,#d97706,#a84b00,#e3df52&color_background=#0d1117
+            dist/github-snake.svg?color_snake=#f85149&color_dots=${{ steps.theme.outputs.dots }}
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#58a6ff&color_dots=${{ steps.theme.outputs.dots }}
+            dist/ocean.gif?color_snake=#58a6ff&color_dots=${{ steps.theme.outputs.dots }}&color_background=#0d1117
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Set up Node.js
-        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
-        with:
-          node-version: '24'
-      - name: Match reference calendar layout
+      - name: Frame calendar with matching seasonal legend
         run: node scripts/style-snake.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,7 +46,7 @@ jobs:
         shell: bash
         run: |
           publish_dir="$(mktemp -d)"
-          cp styled/github-snake.svg styled/github-snake-dark.svg dist/ocean.gif "$publish_dir/"
+          cp styled/github-snake.svg styled/github-snake-dark.svg styled/snake-theme.json dist/ocean.gif "$publish_dir/"
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
             git checkout -B output origin/output
@@ -49,10 +54,10 @@ jobs:
             git checkout --orphan output
             git rm -rf .
           fi
-          cp "$publish_dir/github-snake.svg" "$publish_dir/github-snake-dark.svg" "$publish_dir/ocean.gif" .
+          cp "$publish_dir/github-snake.svg" "$publish_dir/github-snake-dark.svg" "$publish_dir/ocean.gif" "$publish_dir/snake-theme.json" .
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add github-snake.svg github-snake-dark.svg ocean.gif
+          git add github-snake.svg github-snake-dark.svg ocean.gif snake-theme.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore(profile): update snake animation [skip ci]'
             git push origin HEAD:output
