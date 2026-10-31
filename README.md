@@ -93,7 +93,9 @@ I Used as of 2026:
 ## <img src="assets/emojis/rocket.gif" width="28" height="28" alt="Rocket"> My Projects
 
 <!-- PROJECTS:START -->
-Projects will appear here as I share them.
+<table>
+<tr><td width="300"><img src="assets/projects/cde0579b524c48eada969e317ec778c65392beb19e8bf98646bfcf10e7c41f20.png" width="300" alt="test"></td><td><h3>test</h3><p>try 1215515615121222222222222222222222222222222222222</p><p></p></td></tr>
+</table>
 <!-- PROJECTS:END -->
 
 ## Contribution Snake
