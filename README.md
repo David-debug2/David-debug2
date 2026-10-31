@@ -93,7 +93,9 @@ I Used as of 2026:
 ## <img src="assets/emojis/rocket.gif" width="28" height="28" alt="Rocket"> My Projects
 
 <!-- PROJECTS:START -->
-Projects will appear here as I share them.
+<table>
+<tr><td valign="top"><p align="right"><img src="assets/project-icons/status-e3b341.svg" width="18" height="18" alt=""> Testing</p><h3>The Digital Butler</h3><p><img src="assets/projects/cef8ecc488275efbc90dd8ca650a918608145a7ed84d4bdf203ae630a8787a8a.png" width="600" alt="The Digital Butler"></p><p>111111111111111111111111&#8203;111111111111111111111111&#8203;111111111111111111111111&#8203;111111111111111111111111&#8203;1111</p><p><img src="assets/project-icons/dotnetcore.svg" width="28" height="28" alt=".NET" title=".NET"> <img src="assets/project-icons/amazonwebservices.svg" width="28" height="28" alt="Amazonwebservices" title="Amazonwebservices"> <img src="assets/project-icons/android.svg" width="28" height="28" alt="Android" title="Android"> <img src="assets/project-icons/angular.svg" width="28" height="28" alt="Angular" title="Angular"> <img src="assets/project-icons/androidstudio.svg" width="28" height="28" alt="Androidstudio" title="Androidstudio"> <img src="assets/project-icons/arduino.svg" width="28" height="28" alt="Arduino" title="Arduino"></p><p><a href="https://alea-rental-web-app.aleadavid-m.workers.dev/">View project</a> · <a href="https://github.com/David-debug2">Source code</a></p></td></tr>
+</table>
 <!-- PROJECTS:END -->
 
 ## Contribution Snake
