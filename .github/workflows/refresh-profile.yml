@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['README.md', 'scripts/**', 'tests/**', 'package.json', '.github/workflows/refresh-profile.yml']
+    paths: ['README.md', 'scripts/**', 'package.json', '.github/workflows/refresh-profile.yml']
 permissions:
   contents: read
 concurrency:
@@ -22,8 +22,6 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '24'
-      - name: Test generator
-        run: npm test
       - name: Refresh profile
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

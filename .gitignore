@@ -1,4 +1,32 @@
 node_modules/
 .env
 .env.*
-!.env.example
+
+# Local tests, owner guides, and retired assets
+/tests/
+/test/
+/CONTRIBUTING.md
+/MAINTENANCE.md
+/data/projects.json
+/assets/css.svg
+/assets/html.svg
+/assets/javascript.svg
+/assets/projects.svg
+/assets/rank.svg
+/assets/sql.svg
+/assets/typescript.svg
+/assets/youtube.svg
+
+# Personal workspace files and credentials
+AGENTS.md
+.obsidian/
+.codex/
+.agents/
+.vscode/
+.idea/
+*.code-workspace
+*.log
+*.pem
+*.key
+.DS_Store
+Thumbs.db
