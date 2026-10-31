@@ -99,7 +99,7 @@ I Used as of 2026:
 </table>
 <!-- PROJECTS:END -->
 
-## Contribution Snake
+## Contribution
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/David-debug2/David-debug2/output/github-snake-dark.svg">
