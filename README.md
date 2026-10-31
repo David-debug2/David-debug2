@@ -57,6 +57,8 @@ Got a project or an idea? I'm open to collabs and freelance work. Look around, a
 
 [GitHub](https://github.com/David-debug2) · [Project D on YouTube](https://www.youtube.com/@Project-D-2026)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K6G81ZQ6C0)
+
 ## 🧰 Languages and Tools
 
 I Used as of 2026:
