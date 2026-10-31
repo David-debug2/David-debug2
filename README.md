@@ -31,13 +31,13 @@ I'm an Electrical Engineering student at **CIT-U** in the Philippines. I build s
 
 I'm that person who loves making things, kind of **Iron Man-style**. I like figuring out how stuff works, then turning ideas into real projects. Right now I build software projects to help pay for the bigger ones.
 
-## 🧠 How I Work
+## <img src="assets/emojis/brain.gif" width="28" height="28" alt="Brain"> How I Work
 
 - **AI-assisted engineering:** I plan each feature, build with AI, then test, refine, and document it before release.
 - **Right tool for the job:** I don't stick to one stack. I pick what works for each project.
 - **Everything's documented:** My notes and projects live in Obsidian, in my own **Vault OS** vault.
 
-## 🚀 My Philosophy
+## <img src="assets/emojis/rocket.gif" width="28" height="28" alt="Rocket"> My Philosophy
 
 > **Learn. Build. Improve. Repeat.**
 
@@ -51,7 +51,7 @@ Every project teaches me something new, whether it's a quick script, a big engin
 
 </div>
 
-## 🤝 Let's Connect
+## <img src="assets/emojis/handshake.gif" width="28" height="28" alt="Handshake"> Let's Connect
 
 Got a project or an idea? I'm open to collabs and freelance work. Look around, and say hi!
 
@@ -59,7 +59,7 @@ Got a project or an idea? I'm open to collabs and freelance work. Look around, a
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K6G81ZQ6C0)
 
-## 🧰 Languages and Tools
+## <img src="assets/emojis/toolbox.svg" width="28" height="28" alt="Toolbox"> Languages and Tools
 
 I Used as of 2026:
 
@@ -77,7 +77,7 @@ I Used as of 2026:
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
-## 📺 Latest YouTube Videos
+## <img src="assets/emojis/television.gif" width="28" height="28" alt="Television"> Latest YouTube Videos
 
 <!-- VIDEOS:START -->
 <p align="left">

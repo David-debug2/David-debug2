@@ -66,3 +66,7 @@ Inspect the GitHub profile on wide and narrow screens, in light and dark themes.
 ## Seasonal colors
 
 GitHub documents contributionCalendar.colors and isHalloween in its [GraphQL reference](https://docs.github.com/en/graphql/reference/users#contributioncalendar). On each existing daily/manual/main-push run, the live intensity palette replaces the former year-round amber colors. GitHub-selected changes are picked up on the next successful run, including normal colors after Halloween ends. This does not add event themes to GitHub’s native graph or guarantee themes for other holidays. Source colors are kept exactly for nonempty levels; the accepted dark canvas/empty color and red/blue snakes are retained. Invalid API responses stop publication and preserve the last successful artifacts. Check output/snake-theme.json and the workflow logs for the palette and fetch time; image caches may delay display.
+
+## Animated heading emojis
+
+The five heading symbols in README.md use local 28px images in [assets/emojis](assets/emojis/): animated Noto GIFs for brain, rocket, handshake, and television, and the Noto toolbox SVG with a gentle looping rocking transform. Keep descriptive alt text, the same heading labels, and the [artwork attribution and licenses](assets/emojis/ATTRIBUTION.md). The icons sit outside generated markers, so video refresh retains them.
