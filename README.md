@@ -1,5 +1,23 @@
 [![Project D — animated dancing lights banner](assets/project-d-banner.gif)](assets/project-d-dancing-lights.mp4)
 
+<div align="center">
+  <samp>
+    Hi there! I'm <b>David</b><br>
+    EE Student | Engineering Developer | Vibe Coder Engineer
+  </samp>
+</div>
+
+<br>
+
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Iosevka&amp;color=58A6FF&amp;width=700&amp;size=22&amp;center=true&amp;vCenter=true&amp;lines=Electrical+Engineering+student+at+CIT-U;Building+software+and+hardware;Learn.+Build.+Improve.+Repeat."
+    alt="Electrical Engineering student at CIT-U. Building software and hardware. Learn. Build. Improve. Repeat."
+  />
+</div>
+
+<br>
+
 # About Me
 
 ### EE Student | Engineering Developer | Vibe Coder Engineer
