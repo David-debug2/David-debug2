@@ -93,7 +93,9 @@ I Used as of 2026:
 ## <img src="assets/emojis/rocket.gif" width="28" height="28" alt="Rocket"> My Projects
 
 <!-- PROJECTS:START -->
-Projects will appear here as I share them.
+<table>
+<tr><td width="250" align="center" valign="top"><img src="assets/projects/0b6af9b917ef8c892d910acbb7ee783149b15c2e4a26c6d79bc63d585f43318c.png" width="250" height="141" alt="The Digital Butler"></td><td valign="top"><p align="right"><img src="assets/project-icons/status-3fb950.svg" width="18" height="18" alt=""> Released</p><h3>The Digital Butler</h3><p>233333333333333333333333&#8203;333333333333333333333333&#8203;333333333333333333333333&#8203;333333333333333333333333&#8203;3333</p><p><img src="assets/project-icons/dotnetcore.svg" width="28" height="28" alt=".NET" title=".NET"> <img src="assets/project-icons/android.svg" width="28" height="28" alt="Android" title="Android"> <img src="assets/project-icons/amazonwebservices.svg" width="28" height="28" alt="Amazonwebservices" title="Amazonwebservices"></p><p><a href="https://alea-rental-web-app.aleadavid-m.workers.dev/">View project</a> · <a href="https://github.com/David-debug2">Source code</a></p></td></tr>
+</table>
 <!-- PROJECTS:END -->
 
 ## Contribution Snake

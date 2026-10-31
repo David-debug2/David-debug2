@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "fb51db17-7ed5-43f6-a88c-074a9c3e1a0d",
+    "name": "The Digital Butler",
+    "description": "2333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",
+    "technologies": ".NET, Android, Amazonwebservices",
+    "status": "Released",
+    "link": "https://alea-rental-web-app.aleadavid-m.workers.dev/",
+    "github": "https://github.com/David-debug2",
+    "image": "assets/projects/0b6af9b917ef8c892d910acbb7ee783149b15c2e4a26c6d79bc63d585f43318c.png"
+  }
+]
