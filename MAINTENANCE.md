@@ -14,6 +14,10 @@ The updater uses the official YouTube Data API to find the latest public uploads
 
 It builds the snake animation from the account's actual GitHub contributions and reads GitHub's current contribution colors. The animations and palette metadata are published to the repository's [output branch](https://github.com/David-debug2/David-debug2/tree/output). If calendar validation fails, the previous published animations are kept.
 
-## Authored content
+## My Projects
+
+The project section below the YouTube videos is managed by the owner's desktop project editor. Published project details are stored in [data/portfolio.json](data/portfolio.json), with images in assets/projects. The editor updates only the PROJECTS markers in the README, commits the changes, and pushes to main. Drafts remain on the owner's computer until published. The scheduled YouTube refresh preserves this section.
+
+## Other authored content
 
 The biography, links, language and tool badges, banner, and heading images are edited manually. Automatic updates preserve that content. Scheduled runs and image caches can delay when changes appear on the profile.

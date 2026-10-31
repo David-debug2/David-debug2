@@ -90,6 +90,12 @@ I Used as of 2026:
 
 [![Subscribe for more](https://img.shields.io/badge/Subscribe_for_more-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Project-D-2026?sub_confirmation=1)
 
+## <img src="assets/emojis/rocket.gif" width="28" height="28" alt="Rocket"> My Projects
+
+<!-- PROJECTS:START -->
+Projects will appear here as I share them.
+<!-- PROJECTS:END -->
+
 ## Contribution Snake
 
 <picture>
