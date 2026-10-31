@@ -93,7 +93,9 @@ I Used as of 2026:
 ## <img src="assets/emojis/rocket.gif" width="28" height="28" alt="Rocket"> My Projects
 
 <!-- PROJECTS:START -->
-Projects will appear here as I share them.
+<table>
+<tr><td width="300"><strong>test</strong></td><td valign="top"><p align="right">🟢 Released</p><h3>test</h3><p>asd sadasdsadsad</p><p><img src="assets/project-icons/angular.svg" width="28" height="28" alt="Angular" title="Angular"> <img src="assets/project-icons/vscode.svg" width="28" height="28" alt="VS Code" title="VS Code"> <img src="assets/project-icons/javascript.svg" width="28" height="28" alt="JavaScript" title="JavaScript"> <img src="assets/project-icons/python.svg" width="28" height="28" alt="Python" title="Python"></p><p></p></td></tr>
+</table>
 <!-- PROJECTS:END -->
 
 ## Contribution Snake
