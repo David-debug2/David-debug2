@@ -93,9 +93,7 @@ I Used as of 2026:
 ## <img src="assets/emojis/rocket.gif" width="28" height="28" alt="Rocket"> My Projects
 
 <!-- PROJECTS:START -->
-<table>
-<tr><td valign="top"><p align="right"><img src="assets/project-icons/status-f0883e.svg" width="18" height="18" alt=""> On hold</p><h3>The Digital Butler</h3><p><img src="assets/projects/f5bc87095de72c47029a273dae1b324eda9390336ff3073874f870598941ef5e.png" width="600" alt="The Digital Butler"></p><p>222222222222222222222222&#8203;222222222222222222222222&#8203;222222222222222222222222&#8203;222222222222222222222222&#8203;2222</p><p><img src="assets/project-icons/dotnetcore.svg" width="28" height="28" alt=".NET" title=".NET"> <img src="assets/project-icons/android.svg" width="28" height="28" alt="Android" title="Android"> <img src="assets/project-icons/amazonwebservices.svg" width="28" height="28" alt="Amazonwebservices" title="Amazonwebservices"> <img src="assets/project-icons/arduino.svg" width="28" height="28" alt="Arduino" title="Arduino"> <img src="assets/project-icons/astro.svg" width="28" height="28" alt="Astro" title="Astro"></p><p><a href="https://alea-rental-web-app.aleadavid-m.workers.dev/">View project</a> · <a href="https://github.com/David-debug2">Source code</a></p></td></tr>
-</table>
+Projects will appear here as I share them.
 <!-- PROJECTS:END -->
 
 ## Contribution Snake
