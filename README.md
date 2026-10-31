@@ -18,7 +18,8 @@
 
 <br>
 
-# About Me
+<details>
+<summary><h2 align="center">About Me</h2></summary>
 
 ### EE Student | Engineering Developer | Vibe Coder Engineer
 
@@ -39,6 +40,8 @@ I'm that person who loves making things, kind of **Iron Man-style**. I like figu
 Every project teaches me something new, whether it's a quick script, a big engineering system, or a fun game. I learn by doing, because experience is the best teacher.
 
 **Always learning. Always building.**
+
+</details>
 
 ## 🤝 Let's Connect
 
