@@ -2,12 +2,12 @@ import {writeFile,appendFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 
 export function calendarTheme(calendar) {
-  if (!Array.isArray(calendar?.colors) || calendar.colors.length!==5 ||
+  if (!Array.isArray(calendar?.colors) || ![4,5].includes(calendar.colors.length) ||
       !calendar.colors.every(color=>/^#[0-9a-f]{6}$/i.test(color)) ||
       typeof calendar.isHalloween!=='boolean') throw new Error('Invalid GitHub calendar theme');
   return {colors:calendar.colors.map(color=>color.toLowerCase()),
     // Keep the accepted dark canvas and empty cells; use GitHub's live intensity colors.
-    dots:['#161b22',...calendar.colors.slice(1).map(color=>color.toLowerCase())],
+    dots:['#161b22',...(calendar.colors.length===5?calendar.colors.slice(1):calendar.colors).map(color=>color.toLowerCase())],
     isHalloween:calendar.isHalloween};
 }
 
@@ -23,6 +23,7 @@ async function main() {
   const result=await response.json();
   if (result.errors?.length) throw new Error('Contribution calendar response failed');
   const calendar=result.data?.user?.contributionsCollection?.contributionCalendar;
+  console.log('GitHub source theme: '+JSON.stringify({colors:calendar?.colors,isHalloween:calendar?.isHalloween}));
   const theme=calendarTheme(calendar);
   await writeFile('snake-calendar.json',JSON.stringify({calendar,theme:{...theme,fetchedAt:new Date().toISOString()}}));
   await appendFile(process.env.GITHUB_OUTPUT,'dots='+theme.dots.join(',')+'\n');

@@ -45,6 +45,7 @@ test('live GitHub palette selects normal, Halloween, and future seasonal colors 
     const theme=calendarTheme({colors:palette,isHalloween});
     assert.deepEqual(theme.dots,['#161b22',...palette.slice(1)]);
     assert.equal(theme.isHalloween,isHalloween);
+    assert.deepEqual(calendarTheme({colors:palette.slice(1),isHalloween}).dots,theme.dots);
     const {svg,weeks}=fixture();
     const result=styleSnake(svg,weeks,theme.dots);
     for(const color of theme.dots) assert.ok(result.includes('fill="'+color+'"'));
