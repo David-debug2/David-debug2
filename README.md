@@ -59,41 +59,6 @@ I Used as of 2026:
 
 [![Subscribe for more](https://img.shields.io/badge/Subscribe_for_more-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Project-D-2026?sub_confirmation=1)
 
-## Builder Stats
-
-<!-- STATS:START -->
-![Personal rank: Builder, 200 XP](assets/rank.svg)
-
-![Verified portfolio: 2 software · 0 hardware · 2 total](assets/projects.svg)
-
-![YouTube channel stats](assets/youtube.svg)
-
-**Personal rank:** Builder · 200 XP · 200 / 500 XP to Engineer.
-
-**Verified portfolio entries:** 2 software · 0 hardware · 2 total.
-
-Subscribers: 52 · Total channel views: 1922 · Updated: 2026-10-31 UTC
-
-Subscriber counts use YouTube’s public reporting precision.
-<!-- STATS:END -->
-
-<details>
-<summary>How my personal portfolio rank works</summary>
-
-This is my own game-style progress system. Each distinct built project in my [public registry](data/projects.json) earns **100 XP**. Demos, editions, templates, individual features, and this profile are excluded. It measures my portfolio progress, not an official developer rating.
-
-| Rank | XP required |
-| --- | ---: |
-| Apprentice | 0 |
-| Builder | 200 |
-| Engineer | 500 |
-| Inventor | 1,000 |
-| Architect | 2,000 |
-
-The launch registry contains **Alea Rental** and **Vault OS**. Hardware entries will be added as they are verified for this portfolio.
-
-</details>
-
 ## Contribution Snake
 
 <picture>

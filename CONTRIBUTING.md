@@ -16,9 +16,9 @@ Without YOUTUBE_API_KEY, generation preserves the existing YouTube cache and pri
 
 ## Choose the right source
 
-- Edit authored biography text in [README.md](README.md), outside the VIDEOS and STATS markers.
-- Edit [data/projects.json](data/projects.json) for verified built projects; count each project once and exclude demos, editions, templates, individual features, and this profile.
-- Edit [scripts/profile-lib.mjs](scripts/profile-lib.mjs) and [scripts/update-profile.mjs](scripts/update-profile.mjs) for generator behavior, then regenerate derived output. Do not hand-edit generated cards as the sole change.
+- Edit authored biography text in [README.md](README.md), outside the VIDEOS markers.
+- The former [project registry](data/projects.json) and stats cards are retained for history; do not restore the removed Builder Stats section.
+- Edit [scripts/profile-lib.mjs](scripts/profile-lib.mjs) and [scripts/update-profile.mjs](scripts/update-profile.mjs) for generator behavior, then regenerate derived output. The active profile generator updates only the YouTube cache and VIDEOS section.
 - Keep the supplied banner source and both light and dark contribution-snake variants available.
 
 ## Submit a pull request

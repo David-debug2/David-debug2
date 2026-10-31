@@ -7,10 +7,10 @@ The profile is published from the public David-debug2/David-debug2 repository. I
 Use Node.js 24. No npm dependencies or install step are required.
 
 - Run npm test for generator/API fixture checks.
-- Run npm run generate to regenerate README sections, language badges, and stats cards.
-- Keep biography text outside the VIDEOS and STATS comment markers.
-- Edit data/projects.json to maintain the public portfolio. Each entry requires a stable unique id, name, kind (software or hardware), and built boolean. Count each real built project once. Do not add demos, editions, templates, individual features, or this profile.
-- Rank progression: Apprentice 0, Builder 200, Engineer 500, Inventor 1000, Architect 2000 XP; 100 XP per distinct built project. The progress bar measures advancement within the current tier.
+- Run npm run generate to refresh the YouTube cache and generated VIDEOS section.
+- Keep biography text outside the VIDEOS comment markers.
+- The former project registry and stats SVGs are retained as historical files; they are no longer generated or displayed.
+- Builder Stats, personal rank, project totals, channel-stat cards, their README markers, and the rank explanation were removed at the owner request. Automation updates only videos and preserves this removal.
 
 ## Enable YouTube updates
 
@@ -39,13 +39,13 @@ Local fixture tests verify failure handling but do not establish live API access
 
 Refresh profile runs at 00:17 UTC (08:17 Asia/Manila) daily. GitHub Snake Game runs at 00:00 UTC (08:00 Asia/Manila) daily, manually, and on every push to main. Relevant pushes also trigger profile refresh. Scheduled GitHub runs can be delayed or disabled after prolonged repository inactivity; check the Actions page if the displayed date becomes old.
 
-Jobs have bounded runtimes and only the generating job receives contents: write. Actions are pinned to verified commit hashes. The default GitHub token publishes updates; no personal token is needed. Profile updates stage only generated README/SVG/cache files. The full pinned Platane/snk action generates github-snake.svg, github-snake-dark.svg, and ocean.gif for github.repository_owner. The light-selected SVG uses a red snake; the dark-selected SVG and GIF use blue. All use the dark reference background and amber contribution palette specified in the workflow. scripts/style-snake.mjs frames the SVGs with actual calendar month/weekday labels and a Less–More legend, retaining the animation and contribution data. The GIF retains the upstream animation layout. Styling checks the official calendar dates against every SVG cell before publishing, and fails without replacing prior output if geometry/data do not match. All three are committed to output through ordinary non-force pushes; existing output files/history are preserved. Do not force-push either branch.
+Jobs have bounded runtimes and only the generating job receives contents: write. Actions are pinned to verified commit hashes. The default GitHub token publishes updates; no personal token is needed. Profile updates stage only README.md and data/youtube.json. The full pinned Platane/snk action generates github-snake.svg, github-snake-dark.svg, and ocean.gif for github.repository_owner. The light-selected SVG uses a red snake; the dark-selected SVG and GIF use blue. All use the dark reference background and amber contribution palette specified in the workflow. scripts/style-snake.mjs frames the SVGs with actual calendar month/weekday labels and a Less–More legend, retaining the animation and contribution data. The GIF retains the upstream animation layout. Styling checks the official calendar dates against every SVG cell before publishing, and fails without replacing prior output if geometry/data do not match. All three are committed to output through ordinary non-force pushes; existing output files/history are preserved. Do not force-push either branch.
 
 ## Languages, tools, and video cards
 
 The README uses Shields.io `for-the-badge` logo badges for verified languages and tools used across Alea Rental, Vault OS, and this profile. Update the authored badge list in README.md when the actual stack changes. The older local language SVGs are retained but are no longer used by that section.
 
-The VIDEOS section is generated as up to six compact 250px dark cards using ytcards.demolab.com, matching the supplied reference style. Video IDs, titles, publication times, and optional durations come from the official YouTube API cache. Titles are escaped in HTML and encoded in image URLs; valid durations are converted from YouTube ISO 8601 metadata to seconds. Missing durations are omitted. The channel Subscribe button stays outside the generated markers. The video section intentionally omits an Updated footer; successful-refresh dates remain in the cache and Builder Stats. Preserve the authored tool caption I Used as of 2026:.
+The VIDEOS section is generated as up to six compact 250px dark cards using ytcards.demolab.com, matching the supplied reference style. Video IDs, titles, publication times, and optional durations come from the official YouTube API cache. Titles are escaped in HTML and encoded in image URLs; valid durations are converted from YouTube ISO 8601 metadata to seconds. Missing durations are omitted. The channel Subscribe button stays outside the generated markers. The video section intentionally omits an Updated footer; successful-refresh dates remain in the cache. Preserve the authored tool caption I Used as of 2026:.
 
 Shields.io and the video-card service are external image dependencies. If a card image is unavailable, its accessible title and direct YouTube link remain in the README. These services do not receive the API key. Before first successful API activation, the video section retains Awaiting first sync; styling does not establish that live synchronization worked.
 
