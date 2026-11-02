@@ -8,15 +8,5 @@
     "link": "",
     "github": "https://github.com/David-debug2/Github-Profile---Project-sync",
     "image": "assets/projects/cef8ecc488275efbc90dd8ca650a918608145a7ed84d4bdf203ae630a8787a8a.png"
-  },
-  {
-    "id": "e578a955-8800-4957-a66b-0873323a7311",
-    "name": "test",
-    "description": "1121212222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
-    "technologies": "VS Code, GitHub, Obsidian, Rust, Android, Python",
-    "status": "Testing",
-    "link": "",
-    "github": "",
-    "image": "assets/projects/edac37c18df7ddf1aa6e0c4d20b13298c4614313daaeb7f9de0e81d88a86a6c5.jpg"
   }
 ]
