@@ -16,7 +16,7 @@ It builds the snake animation from the account's actual GitHub contributions and
 
 ## My Projects
 
-The project section below the YouTube videos is managed by the owner's desktop project editor. Published project details are stored in [data/portfolio.json](data/portfolio.json), with images in assets/projects. The editor updates only the PROJECTS markers in the README, commits the changes, and pushes to main. Drafts remain on the owner's computer until published. The scheduled YouTube refresh preserves this section.
+The project section below the YouTube videos is managed by the desktop app project editor. Published project details are stored in [data/portfolio.json](data/portfolio.json), with images in assets/projects. The editor updates only the PROJECTS markers in the README, commits the changes, and pushes to main. Drafts remain on the owner's computer until published. The scheduled YouTube refresh preserves this section.
 
 ## Other authored content
 
