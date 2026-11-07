@@ -18,5 +18,15 @@
     "link": "https://ko-fi.com/s/db828d360b",
     "github": "",
     "image": "assets/projects/0b6af9b917ef8c892d910acbb7ee783149b15c2e4a26c6d79bc63d585f43318c.png"
+  },
+  {
+    "id": "1d70d007-fc67-4aa8-97a5-42d261408198",
+    "name": "Rental Management Web App",
+    "description": "A rental-management workspace for small businesses that need a clearer way to manage business.",
+    "technologies": "TypeScript, React, Cloudflare, Supabase, JavaScript",
+    "status": "Released",
+    "link": "https://demo-rental.davidalea.space/",
+    "github": "https://github.com/David-debug2/Rental-Management-Web-App-docs",
+    "image": "assets/projects/12d1f49bfd1fcbb590d3aa28a5a921056f90cea717cf38d253541f671fe9cdae.png"
   }
 ]
